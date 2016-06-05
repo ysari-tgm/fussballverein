@@ -6,9 +6,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Fuer die Tabelle Person werden 12000 Inserts erstellt. Fuer die erste
+ * Nummer wird die maximale Nummer der Tabelle herausgefunden. Der Vorname
+ * ist derselbe wie der Nachname. Diese Namen beginnen von "aaaaa" und
+ * werden immer um einen Buchstaben erhoeht. (aaaaa -> aaaab -> aaaac)
+ * 
+ * @author Yunus Sari
+ * @version 05.06.2016
+ */
 public class InsertThread implements Runnable {
 	private Connection con;
-
+	
+	/**
+	 * Die Verbindung zur Datenbank, wird übergeben.
+	 * 
+	 * @param conn Die Verbindung zur Datenbank
+	 */
 	public InsertThread(Connection conn) {
 		this.con = conn;
 		try {
@@ -19,6 +33,9 @@ public class InsertThread implements Runnable {
 		}
 	}
 
+	/**
+	 * Hier werden die Inserts generiert.
+	 */
 	@Override
 	public void run() {
 

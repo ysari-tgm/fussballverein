@@ -12,7 +12,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-
+/**
+ * Diese Klasse ist eine Application, welches 5 Buttons und die dazugehörigen
+ * Texte als Labels erstellt und gibt denen Funktion (CRUD).
+ * Eines der Buttons (insert2t) führt einen Thread aus. 
+ * 
+ * @author Yunus Sari
+ * @version 05.06.2016
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
